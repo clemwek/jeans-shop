@@ -2,23 +2,42 @@ import React from 'react';
 import { withStyles } from 'material-ui/styles';
 
 import MainTab from '../common/mainTab';
+import JeansCard from './card';
 
 const styles = theme => ({
   root: {
-    display: 'flex',
-    flexWrap: 'wrap',
+    flexGrow: 1,
   },
-  flex: {
-    flex: 1,
+  mainSection: {
+    justifyContent: "space-around",
+    display: "flex",
+    flexWrap: "wrap",
+    flexGrow: 1,
   },
-  
 });
 
-const HomePage = () => {
+const HomePage = (props) => {
+  const { classes } = props
+
   return (
-    <div className={styles.root}>
-      <MainTab className={ styles.centerTab }/>
-      <h1>home page</h1>
+    <div className={classes.root}>
+      <MainTab />
+      <div className={classes.mainSection}>
+        <JeansCard />
+        <JeansCard />
+        <JeansCard />
+        <JeansCard />
+        <JeansCard />
+        <JeansCard />
+        <JeansCard />
+        <JeansCard />
+        <JeansCard />
+        <JeansCard />
+        <JeansCard />
+        <JeansCard />
+        <JeansCard />
+        <JeansCard />
+      </div>
     </div>
   );
 };
